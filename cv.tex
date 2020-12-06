@@ -1,4 +1,3 @@
-
 % Curriculum Vitae - Chek Tien Tan
 %
 % Copyright (C) 2004-2011 Jason R. Blevins
@@ -8,8 +7,6 @@
 % required in any resulting documents.  I do ask that you please leave
 % this notice and the above URL in the source code if you choose to
 % redistribute this file.
-
-% REMINDER: USE BIBTOPIC TYPESET
 
 \documentclass[10pt,a4paper]{article}
 
@@ -38,6 +35,7 @@
 ]{biblatex}
 \addbibresource{all.bib}
 
+% customize the display of the publications
 \defbibenvironment{bibliography}
 {\list
     {\printfield[labelnumberwidth]{labelnumber}}
@@ -51,47 +49,17 @@
 {\endlist}
 {\item}
 
+% other standard libs
 \usepackage{hyperref}
-\usepackage{geometry}
 \usepackage{graphicx}
 
-%\usepackage{bibtopic}
-%\bibliographystyle{plain}
-
+% forgot what I customizing here...
 \renewcommand{\refname}{}
-%\makeatletter
-%\renewcommand\@biblabel[1]{}
-%\makeatother
 
-%\makeatletter
-%\renewcommand\@biblabel[1]{}
-%\renewenvironment{thebibliography}[1]
-%     {\section*{\refname}%
-%      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
-%      \list{}%
-%           {
-%            \itemsep5pt
-%            \leftmargin0pt
-%            \@openbib@code
-%            \usecounter{enumiv}}%
-%      \sloppy
-%      \clubpenalty4000
-%      \@clubpenalty \clubpenalty
-%      \widowpenalty4000%
-%      \sfcode`\.\@m}
-%     {\def\@noitemerr
-%       {\@latex@warning{Empty `thebibliography' environment}}%
-%      \endlist}
-%\makeatother
-
-% Fonts
-%\usepackage[T1]{fontenc}
-%\usepackage[sc,osf]{mathpazo}
-
-% Set your name here
+% set pdf name
 \def\name{Chek Tien Tan}
 
-% The following metadata will show up in the PDF properties
+% the following metadata will show up in the PDF properties
 \hypersetup{
   colorlinks = true,
   urlcolor = black,
@@ -102,6 +70,8 @@
   pdfpagemode = UseNone
 }
 
+% setup page margins
+\usepackage{geometry}
 \geometry{
   %body={6.5in, 9.0in},
   left=0.8in,
@@ -109,36 +79,36 @@
   top=0.8in
 }
 
-% Customize page headers
+% customize page headers
 \pagestyle{myheadings}
 \markright{\name}
 \thispagestyle{empty}
 
-% Custom section fonts
+% custom section fonts
 \usepackage{sectsty}
 \sectionfont{\rmfamily\mdseries\Large}
 \subsectionfont{\rmfamily\mdseries\itshape\large}
 
-% Other possible font commands include:
+% other possible font commands include:
 % \ttfamily for teletype,
 % \sffamily for sans serif,
 % \bfseries for bold,
 % \scshape for small caps,
 % \normalsize, \large, \Large, \LARGE sizes.
 
-% Don't indent paragraphs.
+% don't indent paragraphs.
 \setlength\parindent{0em}
 
-% Make lists without bullets and compact spacing
+% make lists without bullets and compact spacing
 \renewenvironment{itemize}{
-  \begin{list}{}{
-    \setlength{\leftmargin}{1.5em}
-    \setlength{\itemsep}{0.25em}
-    \setlength{\parskip}{0pt}
-    \setlength{\parsep}{0.25em}
-  }
-}{
-  \end{list}
+    \begin{list}{}{
+            \setlength{\leftmargin}{1.5em}
+            \setlength{\itemsep}{0.25em}
+            \setlength{\parskip}{0pt}
+            \setlength{\parsep}{0.25em}
+        }
+        }{
+    \end{list}
 }
 
 \begin{document}
@@ -150,9 +120,8 @@
     \includegraphics[width=1in]{signature}
 \end{figure}
 
-% Alternatively, print name centered and bold:
+% alternatively, print name centered and bold:
 %\centerline{\huge \bf \name}
-
 %\bigskip
 
 \begin{minipage}[t]{0.5\textwidth}
@@ -173,154 +142,159 @@
   Homepage: \href{http://ch3k.com}{https://ch3k.com}
 \end{minipage}
 
-%===========================================================================================
+% Employment {{{
+
 \section*{Employment}
-%===========================================================================================
 
 \begin{itemize}
-\item \textbf{Associate Professor and Centre Director}, InfoComm Technology Cluster, Singapore Institute of Technology,
-	2019--current.
-    \begin{itemize}
-    	\item \textit{Key appointments:} \textbf{Director, Centre for Immersification}.
-        \item \textit{Research projects:} Immersification Tools, Social Immersification, VR/AI for Commuter Experiences, VR for Learning Design, VR for Biopharmaceutical Engineering, Gamification of Student Surveys.
-        \item \textit{Teaching subjects:} Software Engineering, Mobile Applications Development, Data Structures, Software Management, Machine Learning.
-    \end{itemize}
+    \item \textbf{Associate Professor and Centre Director}, InfoComm Technology Cluster, Singapore Institute of Technology,
+        2019--current.
+        \begin{itemize}
+            \item \textit{Key appointments:} \textbf{Director, Centre for Immersification}.
+            \item \textit{Research projects:} Immersification Tools, Social Immersification, VR/AI for Commuter Experiences, VR for Learning Design, VR for Biopharmaceutical Engineering, Gamification of Student Surveys.
+            \item \textit{Teaching subjects:} Software Engineering, Mobile Applications Development, Data Structures, Software Management, Machine Learning.
+        \end{itemize}
 
-\item \textbf{Assistant Professor and Deputy Programme Director}, InfoComm Technology Cluster, Singapore Institute of Technology,
-	2017--2019.
-    \begin{itemize}
-    	\item \textit{Key appointments:} \textbf{Deputy Programme Director, DigiPen BS in Computer Science in Real-Time Interactive Simulation, BS in Computer Science and Game Design, BA in Game Design, BFA in Digital Art and Animation}.
-        \item \textit{Research projects:} VR for Biopharmaceutical Engineering, Underwater VR, Real-world AR for Cycling, Mixed Modality AR for Jogging, Speech-aware Serious Games, Gamification of Student Surveys.
-        \item \textit{Teaching subjects:} Software Engineering, Mobile Applications Development, Data Structures, Performance Testing and Optimization, Software Management.
-    \end{itemize}
+    \item \textbf{Assistant Professor and Deputy Programme Director}, InfoComm Technology Cluster, Singapore Institute of Technology,
+        2017--2019.
+        \begin{itemize}
+            \item \textit{Key appointments:} \textbf{Deputy Programme Director, DigiPen Programmes} 
+            \item \textit{Research projects:} VR for Biopharmaceutical Engineering, Underwater VR, Real-world AR for Cycling, Mixed Modality AR for Jogging, Speech-aware Serious Games, Gamification of Student Surveys.
+            \item \textit{Teaching subjects:} Software Engineering, Mobile Applications Development, Data Structures, Performance Testing and Optimization, Software Management.
+        \end{itemize}
 
-\item \textbf{Senior Lecturer}, School of Software, Faculty of Engineering and Information Technology, University of Technology, Sydney,
-	2014--2016.
-    \begin{itemize}
-        \item \textit{Research appointments:} \textbf{Co-director, Games Studio Lab}.
-        \item \textit{Research projects:} Research through Game Design, Speech-aware Serious Games, Games for Emotional Development, Multimodal Tools for Player Experience Evaluation, Gamification of Flipped Learning, Gamification of Healthy Eating, Terrain Analysis for RTS Game AI.
-        \item \textit{Teaching appointments:} \textbf{Acting Deputy Head of School}, Course Coordinator for B.Sc. Games Development, Subject Assessment Committee.
-        \item \textit{Teaching subjects:} Game Design, Game Programming, Digital Experience Design, Computer Graphics Project.
-    \end{itemize}
+    \item \textbf{Senior Lecturer}, School of Software, Faculty of Engineering and Information Technology, University of Technology, Sydney,
+        2014--2016.
+        \begin{itemize}
+            \item \textit{Key appointments:} \textbf{Co-director, Games Studio Lab, \textbf{Acting Deputy Head of School}, Course Coordinator for B.Sc. Games Development}.
+            \item \textit{Research projects:} Research through Game Design, Speech-aware Serious Games, Games for Emotional Development, Multimodal Tools for Player Experience Evaluation, Gamification of Flipped Learning, Gamification of Healthy Eating, Terrain Analysis for RTS Game AI.
+            \item \textit{Teaching subjects:} Game Design, Game Programming, Digital Experience Design, Computer Graphics Project.
+        \end{itemize}
 
-\item \textbf{Visiting Professor}, Singapore University of Technology and Design, Singapore,
-	2014.
-    \begin{itemize}
-        \item \textit{Research projects:} Multimodal Interfaces for Speech Therapy, Augmenting Jogging with Technology.
-    \end{itemize}
+    \item \textbf{Visiting Assistant Professor}, Singapore University of Technology and Design, Singapore,
+        2014.
+        \begin{itemize}
+            \item \textit{Research projects:} Multimodal Interfaces for Speech Therapy, Augmenting Jogging with Technology.
+        \end{itemize}
 
-\item \textbf{Visiting Research Fellow}, Exertion Games Lab, Royal Melbourne Institute of Technology, Melbourne,
-	2014.
-    \begin{itemize}
-        \item \textit{Research projects:} Augmenting Jogging with Technology.
-    \end{itemize}
+    \item \textbf{Visiting Research Fellow}, Exertion Games Lab, Royal Melbourne Institute of Technology, Melbourne,
+        2014.
+        \begin{itemize}
+            \item \textit{Research projects:} Augmenting Jogging with Technology.
+        \end{itemize}
 
-\item \textbf{Lecturer}, School of Software, Faculty of Engineering and Information Technology, University of Technology, Sydney,
-    2011--2014.
-    \begin{itemize}
-        \item \textit{Teaching appointment:} Subject Assessment Committee.
-        \item \textit{Teaching subjects:} Game Design, Game Programming, Computer Graphics Project.
-        \item \textit{Research appointments:} Co-director, Games Studio Lab, Centre for Human Centred Technology Design.
-        \item \textit{Research projects:} Personalized Games, Player Experience Evaluation Using Facial Expressions, Speech-aware Serious Games, Games for Emotional Development, Multimodal Tools for Player Experience Evaluation, Games for Handwriting Development, Racing Game AI.
-    \end{itemize}
+    \item \textbf{Lecturer}, School of Software, Faculty of Engineering and Information Technology, University of Technology, Sydney,
+        2011--2014.
+        \begin{itemize}
+            \item \textit{Key appointments:} \textbf{Co-director, Games Studio Lab}, Subject Assessment Committee.
+            \item \textit{Teaching subjects:} Game Design, Game Programming, Computer Graphics Project.
+            \item \textit{Research projects:} Personalized Games, Player Experience Evaluation Using Facial Expressions, Speech-aware Serious Games, Games for Emotional Development, Multimodal Tools for Player Experience Evaluation, Games for Handwriting Development, Racing Game AI.
+        \end{itemize}
 
-\item \textbf{Assistant Professor}, Department of Computer Science, DigiPen Institute of Technology,
-    2009--2010.
-    \begin{itemize}
-        \item \textit{Research projects:} Partially Observable Markov Decision Processes in Games, Augmented Reality Games.
-        \item \textit{Industrial project:} Employee training program for Ubisoft.
-        \item \textit{Teaching subjects:} Artificial Intelligence for Games, Algorithms Analysis, Advanced C/C++, Data Structures, Introduction to Computer Technology and Programming.
-    \end{itemize}
+    \item \textbf{Assistant Professor}, Department of Computer Science, DigiPen Institute of Technology,
+        2009--2010.
+        \begin{itemize}
+            \item \textit{Research projects:} Partially Observable Markov Decision Processes in Games, Augmented Reality Games.
+            \item \textit{Industrial project:} Employee training program for Ubisoft.
+            \item \textit{Teaching subjects:} Artificial Intelligence for Games, Algorithms Analysis, Advanced C/C++, Data Structures, Introduction to Computer Technology and Programming.
+        \end{itemize}
 
-\item \textbf{Teaching Assistant}, Department of Computer Science, National University of Singapore,
-    2003--2009.
-    \begin{itemize}
-        \item \textit{Research projects:} Concurrently pursuing Ph.D. research in Adaptive Agent Architectures in Modern Virtual Games.
-        \item \textit{Teaching subjects:} Enterprise Systems Development, Human-Computer Interaction (HCI), Introduction to Computing, Problem Solving in Computing, Programming for Business, Computer Graphics.
-    \end{itemize}
+    \item \textbf{Teaching Assistant}, Department of Computer Science, National University of Singapore,
+        2003--2009.
+        \begin{itemize}
+            \item \textit{Research projects:} Concurrently pursuing Ph.D. research in Adaptive Agent Architectures in Modern Virtual Games.
+            \item \textit{Teaching subjects:} Enterprise Systems Development, Human-Computer Interaction (HCI), Introduction to Computing, Problem Solving in Computing, Programming for Business, Computer Graphics.
+        \end{itemize}
 
-\item \textbf{Research Assistant}, Department of Computer Science, National University of Singapore,
-    2004, 2009.
-    \begin{itemize}
-        \item \textit{Research projects:} 3D Face Correspondence for 3D Reconstruction, Partially Observable Markov Decision Processes in Games.
-    \end{itemize}
+    \item \textbf{Research Assistant}, Department of Computer Science, National University of Singapore,
+        2004, 2009.
+        \begin{itemize}
+            \item \textit{Research projects:} 3D Face Correspondence for 3D Reconstruction, Partially Observable Markov Decision Processes in Games.
+        \end{itemize}
 
-\item \textbf{Information Technology Analyst}, Singhealth Private Limited,
-    2004.
-    \begin{itemize}
-        \item \textit{Industrial project:} Time-critical datawarehousing software development for medical records analysis.
-    \end{itemize}
+    \item \textbf{Information Technology Analyst}, Singhealth Private Limited,
+        2004.
+        \begin{itemize}
+            \item \textit{Industrial project:} Time-critical datawarehousing software development for medical records analysis.
+        \end{itemize}
 
 \end{itemize}
 
-%===========================================================================================
+% Employment }}}
+
+% Education {{{
+
 \section*{Education}
-%===========================================================================================
 
 \begin{itemize}
-  \item \textbf{Ph.D. in Computer Science},
-    National University of Singapore, 2010.
-    % Received August 31, 2010
-    \begin{itemize}
-    \item \textit{Dissertation:}
-      Adaptive Agent Architectures in Modern Virtual Games.
-    \end{itemize}
-  \item \textbf{Bachelor of Computing in Computer Engineering (Hons)},
-    National University of Singapore, 2003.
-    % Received December 31, 2004
+
+    \item \textbf{Ph.D. in Computer Science},
+        National University of Singapore, 2010.
+        % Received August 31, 2010
+        \begin{itemize}
+            \item \textit{Dissertation:}
+                Adaptive Agent Architectures in Modern Virtual Games.
+        \end{itemize}
+
+    \item \textbf{Bachelor of Computing in Computer Engineering (Hons)},
+        National University of Singapore, 2003.
+        % Received December 31, 2004
+
 \end{itemize}
 
+% Education }}}
 
-%===========================================================================================
+% Competitive Grants {{{
+
 \section*{Competitive Grants}
-%===========================================================================================
 
 \begin{itemize}
 
-    \item Centre Director and Lead Proposer, Seed Funding for the ``Centre for Immersification", 2020 (457,800SGD).
+    \item Centre Director and Lead Proposer, SIT \textbf{Centre Seed Funding} for the ``Centre for Immersification", 2020 (457,800 SGD).
 
-    \item Principal Investigator, SGUnited Traineeships for ``Virtual lab-based evaluation of mobility environment to improve first/last mile connections", 2020 (48,000SGD).
+    \item Principal Investigator, WSG \textbf{SGUnited Traineeships} for ``Virtual lab-based evaluation of mobility environment to improve first/last mile connections", 2020 (48,000 SGD).
 
-    \item Co-Investigator, Majurity Trust Award on ``Virtual Reality for Dementia Education and Training", 2020 (99,200 SGD).
+    \item Co-Investigator, \textbf{Majurity Trust Award} on ``Virtual Reality for Dementia Education and Training", 2020 (99,200 SGD).
         
-    \item Principal Investigator, LTA Sustainable Singapore Blueprint Grant on ``Virtual lab-based evaluation of mobility environment to improve first/last mile connections", 2019 (2,283,789SGD).
+    \item Principal Investigator, \textbf{LTA Sustainable Singapore Blueprint Grant} on ``Virtual lab-based evaluation of mobility environment to improve first/last mile connections", 2019 (2,283,789 SGD).
 
-    \item Co-Investigator, MOE Tertiary Education Research Fund (TRF) on ``Exploring Virtual Reality to Improve Chemical Engineering Learning Outcomes", 2019 (240,661SGD).
+    \item Co-Investigator, \textbf{MOE Tertiary Education Research Fund (TRF)} on ``Exploring Virtual Reality to Improve Chemical Engineering Learning Outcomes", 2019 (240,661 SGD).
 
-    \item Co-Investigator, MOE Tertiary Education Research Fund (TRF) on ``Gamified Micro-learning Platform: an Early Intervention for at-risk Freshmen", 2019 (211,125SGD).
+    \item Co-Investigator, \textbf{MOE Tertiary Education Research Fund (TRF)} on ``Gamified Micro-learning Platform: an Early Intervention for at-risk Freshmen", 2019 (211,125 SGD).
 
-    \item Collaborator, SIT \textbf{Ignition Grant} on ``Project Kampong Lorong Buangkok: Preserving Singapore mainlandâs last kampong", 2018 (150,000SGD).
+    \item Collaborator, SIT \textbf{Ignition Grant} on ``Project Kampong Lorong Buangkok: Preserving Singapore mainland's last kampong", 2018 (150,000 SGD).
 
-    \item Principal Investigator, SIT \textbf{Seed Grant} on ``VRSafe: A Virtual Reality Safety Training Platform for Cyclists and PMD Users in Singapore", 2018 (9,898SGD).
+    \item Principal Investigator, SIT \textbf{Seed Grant} on ``VRSafe: A Virtual Reality Safety Training Platform for Cyclists and PMD Users in Singapore", 2018 (9,898 SGD).
 
-    \item Co-Investigator, SIT \textbf{Ignition Grant} on ``Virtual Reality Mobility Training (VRMT) For Physiotherapy", 2018 (100,000SGD).
+    \item Co-Investigator, SIT \textbf{Ignition Grant} on ``Virtual Reality Mobility Training (VRMT) For Physiotherapy", 2018 (100,000 SGD).
 
     \item Co-Investigator, SIT \textbf{Ignition Grant} on ``How computer gaming affects the brain health of post-stroke patients?", 2018 (60,080SGD).
 
-    \item Co-Investigator, SIT \textbf{Advancement of Learning and Teaching (SALT) Grant} for Immersive Training for Bioreactor Operations, 2017 (10,000SGD).
+    \item Co-Investigator, SIT \textbf{Advancement of Learning and Teaching (SALT) Grant} for Immersive Training for Bioreactor Operations, 2017 (10,000 SGD).
 
-    \item Co-Investigator, UTS \textbf{Teaching \& Learning Grant} for An End-of-Year Exhibition of Undergraduate Student Project Work within Interaction Design, Digital Design and Software Development, 2016 (5,000AUD).
+    \item Co-Investigator, UTS \textbf{Teaching \& Learning Grant} for An End-of-Year Exhibition of Undergraduate Student Project Work within Interaction Design, Digital Design and Software Development, 2016 (5,000 AUD).
         % Sam Ferguson, Andrew Johnston, Tuck Wah Leong, Elise van den Hoven, Chek Tien Tan, Tim Chen
 
-    \item Co-Investigator, UTS \textbf{ARC Linkage Seed Grant} for Adaptable Game Mechanics Project, 2016 (3,000AUD).
+    \item Co-Investigator, UTS \textbf{ARC Linkage Seed Grant} for Adaptable Game Mechanics Project, 2016 (3,000 AUD).
 
-    \item Principal Investigator, UTS \textbf{Teaching \& Learning Grant} for Improving Student Motivations for Flipped Learning through Gamification Project, 2014 (4,552AUD).
+    \item Principal Investigator, UTS \textbf{Teaching \& Learning Grant} for Improving Student Motivations for Flipped Learning through Gamification Project, 2014 (4,552 AUD).
 
-    \item Principal Investigator, UTS \textbf{DECRA Seed Fund} for Constructing Design Patterns for Gamification of Healthy Eating Project, 2014 (4,000AUD).
+    \item Principal Investigator, UTS \textbf{Seed Fund} for Constructing Design Patterns for Gamification of Healthy Eating, 2014 (4,000 AUD).
 
-    \item Principal Investigator, UTS \textbf{HCTD Seed Fund} for Facial Expressions Serious Game Engine, 2012 (3,000AUD).
+    \item Principal Investigator, UTS \textbf{HCTD Seed Fund} for Facial Expressions Serious Game Engine, 2012 (3,000 AUD).
 
-    \item Principal Investigator, UTS \textbf{FEIT Industry and Innovation Grant} for Embodied Interfaces For Creative Expression in Dance Performance Project, 2012 (20,000AUD).
+    \item Principal Investigator, UTS \textbf{FEIT Industry and Innovation Grant} for Embodied Interfaces For Creative Expression in Dance Performance, 2012 (20,000 AUD).
 
-    \item Recipient, UTS \textbf{Early Career Researcher Grant} for Automatic Playtesting Project, 2012 (5,000AUD).
+    \item Recipient, UTS \textbf{Early Career Researcher Grant} for Automatic Playtesting Project, 2012 (5,000 AUD).
 
-    \item Recipient, UTS \textbf{Research Startup Grant} for Automatic Playtesting Project, 2011 (10,000AUD).
+    \item Recipient, UTS \textbf{Research Startup Grant} for Automatic Playtesting Project, 2011 (10,000 AUD).
 
 \end{itemize}
+% Competitive Grants }}}
 
-%===========================================================================================
+% Publications {{{
+
 \section*{Publications}
-%===========================================================================================
 
 \nocite{*}
 
@@ -334,9 +308,11 @@
 \printbibliography[filter=book,heading=subbibliography,title={Book Chapters}]
 \printbibliography[type=misc,heading=subbibliography,title={Edited Proceedings}]
 
-%===========================================================================================
+% Publications }}}
+
+% Invited Talks {{{
+
 \section*{Invited Talks}
-%===========================================================================================
 
 \begin{itemize}
 
@@ -361,49 +337,53 @@
 
 \end{itemize}
 
-%===========================================================================================
+% Invited Talks }}}
+
+% Public & Professional Service {{{
+
 \section*{Public \& Professional Service}
-%===========================================================================================
 
 \begin{itemize}
 
-\item \textbf{Conference Chairing}
-\begin{itemize}
-    \item \textbf{Workshops Co-chair}, OzCHI, 2016.
-    \item \textbf{Panel Chair} for Indie Game: An Australian Perspective, Sydney International Animation Festival (SIAF), 2013.
-    \item \textbf{Posters \& Demos Chair}, ACM Creativity \& Cognition (C\&C), 2013.
-    \item \textbf{Track Chair}, Business and Revenue Models in Gaming Industry, International Conference on Managing the Asian Century (ICMAC), 2013.
-    \item \textbf{Program Chair}, Australasian Conference on Interactive Entertainment (IE), 2012.
-    \item \textbf{Panel Chair} for Code Warriors, Sydney International Animation Festival (SIAF) 2011.
-    \item \textbf{General Conference Chair}, The Simulation and AI in Games Conference, GAMEON-ASIA, EUROSIS, 2011.
+    \item \textbf{Conference Chairing}
+        \begin{itemize}
+            \item \textbf{Workshops Co-chair}, OzCHI, 2016.
+            \item \textbf{Panel Chair} for Indie Game: An Australian Perspective, Sydney International Animation Festival (SIAF), 2013.
+            \item \textbf{Posters \& Demos Chair}, ACM Creativity \& Cognition (C\&C), 2013.
+            \item \textbf{Track Chair}, Business and Revenue Models in Gaming Industry, International Conference on Managing the Asian Century (ICMAC), 2013.
+            \item \textbf{Program Chair}, Australasian Conference on Interactive Entertainment (IE), 2012.
+            \item \textbf{Panel Chair} for Code Warriors, Sydney International Animation Festival (SIAF) 2011.
+            \item \textbf{General Conference Chair}, The Simulation and AI in Games Conference, GAMEON-ASIA, EUROSIS, 2011.
+        \end{itemize}
+
+    \item \textbf{Conference Program Committees}
+        \begin{itemize}
+            \item Joint Digital Games Research Association and Foundations of Digital Games (DIGRA/FDG) Program Committee, 2016.
+            \item Foundations of Digital Games (FDG) Program Committee, 2015--present.
+            \item Chinese CHI, 2015--present.
+            \item OzCHI, 2014--present.
+            \item International Conference on Entertainment Computing (ICEC), 2013--present.
+            \item Australasian Conference on Interactive Entertainment (IE), 2013--Present.
+            \item Symposium on GPU Computing \& Applications, 2013.
+        \end{itemize}
+
+    \item \textbf{External Examiner}
+        \begin{itemize}
+            \item Ph.D. Thesis, Queensland University of Technology (QUT), 2016.
+            \item Ph.D. Thesis, Royal Melbourne Institute of Technology (RMIT), 2014.
+        \end{itemize}
+
+    \item \textbf{External Expert} for the Higher Degree Research Consortium, QUT, QLD, Australia, 2011. % removed long form to fix overfull
+
+    \item \textbf{Academic Advisory Board}, Sydney International Animation Festival (SIAF) 2011--2015.
+
 \end{itemize}
 
-\item \textbf{Conference Program Committees}
-\begin{itemize}
-    \item Joint Digital Games Research Association and Foundations of Digital Games (DIGRA/FDG) Program Committee, 2016.
-    \item Foundations of Digital Games (FDG) Program Committee, 2015--present.
-    \item Chinese CHI, 2015--present.
-    \item OzCHI, 2014--present.
-    \item International Conference on Entertainment Computing (ICEC), 2013--present.
-    \item Australasian Conference on Interactive Entertainment (IE), 2013--Present.
-    \item Symposium on GPU Computing \& Applications, 2013.
-\end{itemize}
+% Public & Professional Service }}}
 
-\item \textbf{External Examiner}
-\begin{itemize}
-    \item Ph.D. Thesis, Queensland University of Technology (QUT), 2016.
-    \item Ph.D. Thesis, Royal Melbourne Institute of Technology (RMIT), 2014.
-\end{itemize}
+% Professional Associations {{{
 
-\item \textbf{External Expert} for the Higher Degree Research Consortium, Queensland University of Technology (QUT), QLD, Australia, 2011.
-
-\item \textbf{Academic Advisory Board}, Sydney International Animation Festival (SIAF) 2011--Present.
-
-\end{itemize}
-
-%===========================================================================================
 \section*{Professional Associations}
-%===========================================================================================
 
 \begin{itemize}
 
@@ -417,9 +397,11 @@
 
 \end{itemize}
 
-%===========================================================================================
+% Professional Associations }}}
+
+% In the Media {{{
+
 \section*{In the Media}
-%===========================================================================================
 
 \begin{itemize}
 
@@ -431,39 +413,43 @@
 
     \item \textbf{Exclusive Interview}, Serious Games, U: Magazine, Issue 3, May 2014. \url{http://newsroom.uts.edu.au/news/2014/05/serious-games}
 
-\item \textbf{Invited Article}, Flappy Bird and the eight secrets to optimal gameplay, The Conversation, 2014. \url{https://theconversation.com/flappy-bird-and-the-eight-secrets-to-optimal-gameplay-25603}
+    \item \textbf{Invited Article}, Flappy Bird and the eight secrets to optimal gameplay, The Conversation, 2014. \url{https://theconversation.com/flappy-bird-and-the-eight-secrets-to-optimal-gameplay-25603}
 
-\item \textbf{Expert Opinion}, Computers are getting creative, The Sydney Morning Herald Digital Life, 2014. \url{http://www.smh.com.au/digital-life/digital-life-news/computers-are-getting-creative-20140220-331n0.html}
+    \item \textbf{Expert Opinion}, Computers are getting creative, The Sydney Morning Herald Digital Life, 2014. \url{http://www.smh.com.au/digital-life/digital-life-news/computers-are-getting-creative-20140220-331n0.html}
 
-\item \textbf{TV Guest Expert}, Enquiring Minds Television Show, Television Sydney, 2013.
+    \item \textbf{TV Guest Expert}, Enquiring Minds Television Show, Television Sydney, 2013.
 
-\item \textbf{TV Guest Expert}, The Good Game Television Show, Australian Broadcasting Corporation, 2011.
+    \item \textbf{TV Guest Expert}, The Good Game Television Show, Australian Broadcasting Corporation, 2011.
 
-\item \textbf{Expert Opinion}, Sony restores network; struggles to restore trust, MacWorld Online Magazine, 2011. \url{http://www.macworld.com.au/news/sony-restores-network-struggles-to-restore-trust-29928/}
+    \item \textbf{Expert Opinion}, Sony restores network; struggles to restore trust, MacWorld Online Magazine, 2011. \url{http://www.macworld.com.au/news/sony-restores-network-struggles-to-restore-trust-29928/}
 
 \end{itemize}
 
-%===========================================================================================
+% In the Media }}}
+
+% Published Research Applications {{{
+
 \section*{Published Research Applications}
-%===========================================================================================
 
 \begin{itemize}
 
-\item \textbf{SpeechWorm}, iPad/iPhone App for speech therapy. \\URL: https://itunes.com/apps/speechworm
+    \item \textbf{SpeechWorm}, iPad/iPhone App for speech therapy. \\URL: https://itunes.com/apps/speechworm
 
-\item \textbf{SpeechWordPop}, iPad/iPhone App for speech therapy. \\URL: https://itunes.com/apps/speechwordpop
+    \item \textbf{SpeechWordPop}, iPad/iPhone App for speech therapy. \\URL: https://itunes.com/apps/speechwordpop
 
-\item \textbf{CopyMe}, iPad App for children to learn emotions. First iOS app with robust facial expression recognition. \\URL: https://itunes.com/apps/copyme
+    \item \textbf{CopyMe}, iPad App for children to learn emotions. First iOS app with robust facial expression recognition. \\URL: https://itunes.com/apps/copyme
 
-\item \textbf{Speech Invaders}, iPad/iPhone App for speech therapy. \\URL: https://itunes.com/apps/speechinvaders
+    \item \textbf{Speech Invaders}, iPad/iPhone App for speech therapy. \\URL: https://itunes.com/apps/speechinvaders
 
-\item \textbf{Yak-man}, iPad/iPhone App for speech therapy. \\URL: https://itunes.com/apps/yakman
+    \item \textbf{Yak-man}, iPad/iPhone App for speech therapy. \\URL: https://itunes.com/apps/yakman
 
 \end{itemize}
 
-%===========================================================================================
+% Published Research Applications }}}
+
+% Subjects Taught {{{
+
 \section*{Subjects Taught}
-%===========================================================================================
 
 \begin{itemize}
 
@@ -555,9 +541,12 @@
 
 \end{itemize}
 
-%===========================================================================================
+% Subjects Taught }}}
+
+% Competitive Awards, Honors {{{
+
 \section*{Competitive Awards, Honors}
-%===========================================================================================
+
 \begin{itemize}
     \item SIGCHI \textbf{Best Paper Honorable Mention} for CHI Play 2015 paper on Exploring Gameplay Experiences on the Oculus Rift, 2014.
 
@@ -566,59 +555,60 @@
     \item Selected \textbf{Best Paper for Republication} at Australian Computer Science Week: Inferring Player Experiences Using Facial Expressions Analysis, In: Proceedings of the 10th Australasian Conference on Interactive Entertainment. ACM Press, 2014.
 
     \item Recipient, NUS \textbf{Graduate Scholarship} for Ph.D. Studies,
-        2004-2008 (120,000SGD stipend over four years).
+        2004-2008 (120,000 SGD stipend over four years).
 
     \item Co-director, NUS Venture Support (NVS) \textbf{Seed Funding} for Technological Startup,
-        2005 (40,000SGD).
+        2005 (40,000 SGD).
 \end{itemize}
 
-%===========================================================================================
+% Competitive Awards, Honors }}}
+
+% Other Notable Activities {{{
+
 \section*{Other Notable Activities}
-%===========================================================================================
 
 \begin{itemize}
 
-\item Adult Education Professional,
-	2017--current
-	\begin{itemize}
-		\item Certified educator for adult learners in Singapore.
-	\end{itemize}
+    \item Adult Education Professional,
+        2017--current
+        \begin{itemize}
+            \item Certified educator for adult learners in Singapore.
+        \end{itemize}
 
-\item Graduate Certificate in Higher Education Teaching \& Learning (UTS),
-	2011-2012
-	\begin{itemize}
-       		\item Attended foundational modules including student learning and teaching
-approaches, as well as course design and assessment.
-        		\item Used knowledge to improve subject designs at UTS.
-    	\end{itemize}
+    \item Graduate Certificate in Higher Education Teaching \& Learning (UTS),
+        2011-2012
+        \begin{itemize}
+            \item Attended foundational modules including student learning and teaching
+                approaches, as well as course design and assessment.
+            \item Used knowledge to improve subject designs at UTS.
+        \end{itemize}
 
-\item Signal Officer (part-time), Singapore Armed Forces,
-    2000--current.
-    \begin{itemize}
-        \item Conducted lectures on signal equipment usage and deployment.
-        \item Led teams of sergeants and soldiers in various administrative and field duties.
-    \end{itemize}
+    \item Signal Officer (part-time), Singapore Armed Forces,
+        2000--current.
+        \begin{itemize}
+            \item Conducted lectures on signal equipment usage and deployment.
+            \item Led teams of sergeants and soldiers in various administrative and field duties.
+        \end{itemize}
 
-\item Director for Technology, Frensville Pte. Ltd.,
---
+    \item Director for Technology, Frensville Pte. Ltd.,
+        \begin{itemize}
+            \item Developed the business plan from scratch and successfully secured 40,000 SGD worth of seed funding.
+        \end{itemize}
 
-        \item Developed the business plan from scratch and successfully secured 40,000SGD worth of seed funding.
-    \end{itemize}
+    \item Freelance Web Development Consultation,
+        2004-2010.
+        \begin{itemize}
+            \item Designed and developed a Rich Internet Application (RIA) using Adobe Flex, Actionscript, PHP and MySQL for an interactive real-time online booking system. The application was deployed successfully for Hygeia Pte. Ltd., a healthcare therapeutic solutions company.
 
-\item Freelance Web Development Consultation,
-    2004-2010.
-    \begin{itemize}
-        \item Designed and developed a Rich Internet Application (RIA) using Adobe Flex, Actionscript, PHP and MySQL for an interactive real-time online booking system. The application was deployed successfully for Hygeia Pte. Ltd., a healthcare therapeutic solutions company.
-
-\item Designed and developed several web Content Management Systems based on the Drupal open-source platform. Programming was mainly done in PHP whilst database in MySQL. The companies involved include a popular hardware review site (Hardwarezone Pte. Ltd.) as well as a financial portal (Qotion.com Pte. Ltd.).
-    \end{itemize}
+            \item Designed and developed several web Content Management Systems based on the Drupal open-source platform. Programming was mainly done in PHP whilst database in MySQL. The companies involved include a popular hardware review site (Hardwarezone Pte. Ltd.) as well as a financial portal (Qotion.com Pte. Ltd.).
+        \end{itemize}
 \end{itemize}
+
+% Other Notable Activities }}}
 
 \medskip
 
-%===========================================================================================
 % Footer
-%===========================================================================================
 \begin{center}
   \begin{small}
     Last updated: \today
