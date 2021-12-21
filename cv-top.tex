@@ -41,11 +41,11 @@
 	%sorting=none,
 	maxnames=12,
 	isbn=false,
-	doi=false,
+	doi=true,
 	url=false,
 	eprint=false
 ]{biblatex}
-\addbibresource{all.bib}
+\addbibresource{top.bib}
 
 % customize the display of the publications
 \defbibenvironment{bibliography}
@@ -306,19 +306,13 @@
 
 % Publications {{{
 
-\section*{Publications}
-
 \nocite{*}
 
-\defbibfilter{book}{
-  type=book or
-  type=incollection
-}
-
-\printbibliography[type=inproceedings,heading=subbibliography,title={Peer-reviewed Conference Papers}]
-\printbibliography[type=article,heading=subbibliography,title={Peer-reviewed Journal Articles}]
-\printbibliography[filter=book,heading=subbibliography,title={Book Chapters}]
-\printbibliography[type=misc,heading=subbibliography,title={Edited Proceedings}]
+%\printbibliography[type=inproceedings,heading=subbibliography,title={Peer-reviewed Conference Papers}]
+%\printbibliography[type=article,heading=subbibliography,title={Peer-reviewed Journal Articles}]
+%\printbibliography[filter=book,heading=subbibliography,title={Book Chapters}]
+%\printbibliography[type=misc,heading=subbibliography,title={Edited Proceedings}]
+\printbibliography[title={Selected Publications}]
 
 % Publications }}}
 
@@ -563,6 +557,7 @@
 \section*{Competitive Awards, Honors}
 
 \begin{itemize}
+    \item Nominated for SIT \textbf{Teaching Excellence Award}, 2021.
     \item SIGCHI \textbf{Best Paper Honorable Mention} for CHI Play 2015 paper on Exploring Gameplay Experiences on the Oculus Rift, 2014.
 
     \item Nominated for UTS \textbf{Medal for Excellence in Teaching and Research Integration}, 2014.
